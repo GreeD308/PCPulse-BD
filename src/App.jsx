@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AppLayout from './layouts/AppLayout'
 import Dashboard from './pages/Dashboard'
 import Products from './pages/Products'
+import ProductDetail from './pages/ProductDetail'
 import PriceComparison from './pages/PriceComparison'
 import MarketTrends from './pages/MarketTrends'
 import BestDeals from './pages/BestDeals'
@@ -15,6 +16,7 @@ export default function App() {
         <Route element={<AppLayout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
           <Route path="/price-comparison" element={<PriceComparison />} />
           <Route path="/market-trends" element={<MarketTrends />} />
           <Route path="/best-deals" element={<BestDeals />} />
